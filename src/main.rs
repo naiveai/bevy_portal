@@ -4,6 +4,9 @@ use bevy::{
 };
 
 fn main() {
+    #[cfg(target_arch = "wasm32")]
+    console_error_panic_hook::set_once();
+
     let mut app = App::new();
 
     #[cfg(debug_assertions)]
